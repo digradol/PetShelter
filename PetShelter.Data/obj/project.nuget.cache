@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "umTa8T49C2wVXubZGvdI/YdwoxfJmotZbnx1mldvVw3PgD131+fePn53HEZH8v+jhUgTwVKZR9JVjB9d+8MQNg==",
+  "dgSpecHash": "+AsoiG1X2KdX8F3aZne1hCfLW3IGa+1FWuvNCPP1fXHkxYWp0e4wo7BJaA/5xvu6m4AgYWtxzW+zLcQrEuwmsA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dzi_22\\Desktop\\PR_PetShelter\\PetShelter_StepbyStep_Guide\\PetShelter.Data\\PetShelter.Data.csproj",
+  "projectFilePath": "C:\\Users\\dzi_22\\Desktop\\PR_PetShelter\\PetShelter\\PetShelter.Data\\PetShelter.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dzi_22\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\dzi_22\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
