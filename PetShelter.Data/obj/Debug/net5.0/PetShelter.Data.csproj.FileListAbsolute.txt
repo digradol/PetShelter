@@ -1,5 +1,0 @@
-C:\Users\dzi_22\Desktop\PR_PetShelter\PetShelter_StepbyStep_Guide\PetShelter.Data\obj\Debug\net5.0\PetShelter.Data.csproj.AssemblyReference.cache
-C:\Users\dzi_22\Desktop\PR_PetShelter\PetShelter_StepbyStep_Guide\PetShelter.Data\obj\Debug\net5.0\PetShelter.Data.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\dzi_22\Desktop\PR_PetShelter\PetShelter_StepbyStep_Guide\PetShelter.Data\obj\Debug\net5.0\PetShelter.Data.AssemblyInfoInputs.cache
-C:\Users\dzi_22\Desktop\PR_PetShelter\PetShelter_StepbyStep_Guide\PetShelter.Data\obj\Debug\net5.0\PetShelter.Data.AssemblyInfo.cs
-C:\Users\dzi_22\Desktop\PR_PetShelter\PetShelter_StepbyStep_Guide\PetShelter.Data\obj\Debug\net5.0\PetShelter.Data.csproj.CoreCompileInputs.cache
