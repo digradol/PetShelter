@@ -1,4 +1,6 @@
-﻿using Microsoft.Data.SqlClient;
+﻿using AutoMapper;
+using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 using PetShelter.Data.Entities;
 using PetShelter.Shared.Dtos;
 using PetShelter.Shared.Repos.Contracts;
@@ -95,7 +97,7 @@ namespace PetShelter.Data.Repos
                 {
                     throw new ArgumentNullException(nameof(entity));
                 }
-                _context.Entity(entity).CurrentValues.SetValues(model);
+                _context.Entry(entity).CurrentValues.SetValues(model);
                 await _context.SaveChangesAsync();
             }
             catch (SqlException ex)
@@ -141,18 +143,18 @@ namespace PetShelter.Data.Repos
             }
             catch (SqlException ex)
             {
-                await Console.Out.WriteLineAsync($"The system threw an sql exception trying to delete {nameof(model)} : {ex.Message}");
+                await Console.Out.WriteLineAsync($"The system threw an sql exception trying to delete {nameof(entity)} : {ex.Message}");
 
             }
             catch (Exception ex)
             {
-                await Console.Out.WriteLineAsync($"The system threw a non-sql exception trying to delete {nameof(model)} : {ex.Message}");
+                await Console.Out.WriteLineAsync($"The system threw a non-sql exception trying to delete {nameof(entity)} : {ex.Message}");
             }
 
         }
 
 
-        public Task<bool> ExistByIdAsync(int id)
+        public Task<bool> ExistsByIdAsync(int id)
         {
             return _dbSet.AnyAsync(e => e.Id == id);
         }
