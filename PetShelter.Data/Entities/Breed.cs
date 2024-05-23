@@ -1,5 +1,4 @@
-﻿using PetShelter.Shared.Attributes;
-using PetShelter.Shared.Enums;
+﻿using PetShelter.Shared.Enums;
 using System.Collections.Generic;
 
 namespace PetShelter.Data.Entities

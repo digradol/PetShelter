@@ -1,6 +1,4 @@
-﻿using PetShelter.Shared.Attributes;
-
-namespace PetShelter.Data.Entities
+﻿namespace PetShelter.Data.Entities
 {
     public class Location : BaseEntity
     {        

@@ -1,5 +1,4 @@
-﻿using PetShelter.Shared.Attributes;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace PetShelter.Data.Entities
