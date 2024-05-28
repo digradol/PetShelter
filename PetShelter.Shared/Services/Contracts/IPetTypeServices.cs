@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace PetShelter.Shared.Services.Contracts
 {
-    public interface IPetTypeServices : IBaseCrudServices<BreedDto, IBreedRepository>
+    public interface IPetTypeServices : IBaseCrudServices<PetTypeDto, IPetTypeRepository>
     {
     }
 }
