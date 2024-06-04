@@ -33,6 +33,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PetShelter.Data\PetShelter.Data.csproj" />
+    <ProjectReference Include="..\PetShelter.Services\PetShelter.Services.csproj" />
   </ItemGroup>
 
 </Project>

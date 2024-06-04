@@ -9,5 +9,10 @@ namespace PetShelter.Shared
     public static class Constants
     {
         public static readonly string UserNotFound = "User does not exists.\n";
+
+        public static readonly string InvalidPagination = "InvalidPagination.\n";
+        public static readonly string InvalidId = "InvalidId.\n";
+        
+
     }
 }

@@ -1,6 +1,7 @@
 ﻿namespace PetShelter_StepbyStep_Guide.ViewModels
 {
-    public class PetTypeEditVM
+    public class PetTypeEditVM : BaseVM
     {
+        public string Name { get; set; }
     }
 }

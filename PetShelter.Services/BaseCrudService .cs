@@ -4,7 +4,7 @@ using PetShelter.Shared.Services.Contracts;
 
 namespace PetShelter.Services
 {
-    public abstract class BaseCrudService<TModel, TRepository> : IBaseCrudServices<TModel, TRepository>
+    public abstract class BaseCrudService<TModel, TRepository> : IBaseCrudService<TModel, TRepository>
         where TModel : BaseModel
         where TRepository : IBaseRepository<TModel>
     {

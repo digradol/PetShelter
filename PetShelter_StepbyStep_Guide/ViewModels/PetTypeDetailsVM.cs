@@ -1,6 +1,11 @@
-﻿namespace PetShelter_StepbyStep_Guide.ViewModels
+﻿using PetShelter.Data.Entities;
+
+namespace PetShelter_StepbyStep_Guide.ViewModels
 {
-    public class PetTypeDetailsVM
+    public class PetTypeDetailsVM : BaseVM
     {
+        public string Name { get; set; }
+
+        public virtual Pet Pets { get; set; }
     }
 }

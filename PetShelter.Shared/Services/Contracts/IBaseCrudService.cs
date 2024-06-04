@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace PetShelter.Shared.Services.Contracts
 {
-    public interface IBaseCrudServices<TModel, TRepository>
+    public interface IBaseCrudService<TModel, TRepository>
         where TModel : BaseModel
         where TRepository : IBaseRepository<TModel>
     {
