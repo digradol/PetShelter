@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using PetShelter.Data.Entities;
+using System.Collections.Generic;
 
 namespace PetShelter_StepbyStep_Guide.ViewModels
 {
@@ -14,5 +15,9 @@ namespace PetShelter_StepbyStep_Guide.ViewModels
         public int LocationId { get; set; }
         public List<UserDetailsVM> Employees { get; set; }
         public List<PetDetailsVM> Pets { get; set; }
+        public virtual List<Pet> AdoptedPets { get; set; }
+
+        public virtual List<Pet> GivenPets { get; set; }
+
     }
 }

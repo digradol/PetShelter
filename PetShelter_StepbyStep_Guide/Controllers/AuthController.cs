@@ -1,11 +1,15 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PetShelter.Data.Entities;
+using PetShelter.Shared;
 using PetShelter.Shared.Dtos;
 using PetShelter.Shared.Enums;
+using PetShelter.Shared.Security;
+using PetShelter.Shared.Services.Contracts;
 using PetShelter_StepbyStep_Guide.ViewModels;
 using System.Security.Claims;
 using System.Threading.Tasks;
@@ -15,11 +19,11 @@ namespace PetShelter_StepbyStep_Guide.Controllers
     [AllowAnonymous]
     public class AuthController : Controller
     {
-        private readonly IUsersService usersService;
-        private readonly IRolesService rolesService;
+        private readonly IUserServices usersService;
+        private readonly IRoleServices rolesService;
         private readonly IMapper mapper;
-        public AuthController(IUsersService usersService,
-            IRolesService rolesService,
+        public AuthController(IUserServices usersService,
+            IRoleServices rolesService,
                 IMapper mapper)
         {
             this.usersService = usersService;
@@ -79,10 +83,10 @@ namespace PetShelter_StepbyStep_Guide.Controllers
             var hasherPassword = PasswordHasher.HashPassword(userCreateModel.Password);
             userCreateModel.Password = hasherPassword;
             var userDto = this.mapper.Map<UserDto>(userCreateModel);
-            userDto.RoleId = (await rolesService.GetByNameIfExistsAsync(UserRole.User.ToString()))?.id;
+            userDto.RoleId = (await rolesService.GetByNameIfExistsAsync(UserRole.User.ToString()))?.Id;
             await this.usersService.SaveAsync(userDto);
             await LoginUser(userDto.Username);
-            return RedirectToAction(nameof(HomeController, Index), "Home");
+            return RedirectToAction(nameof(HomeController.Index), "Home");
         }
         [HttpGet]
         public async Task<IActionResult> Logout()

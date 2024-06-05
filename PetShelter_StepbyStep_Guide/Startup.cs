@@ -11,6 +11,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using PetShelter.Shared.Extensions;
+using PetShelter.Services;
+using PetShelter.Data.Repos;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace PetShelter_StepbyStep_Guide
 {
@@ -33,11 +36,12 @@ namespace PetShelter_StepbyStep_Guide
                 options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]);
             });
 
-            Services.AddAutoMapper(m => m.AddProfile(new AutoMapperConfiguration()));
-            Services.AutoBind(typeof(PetService).Assembly);
-            Services.AutoBind(typeof(PetRepository).Assembly);
-            Services.AddAutoMapper(m => m.AddProfile(new AutoMapperConfiguration()));
-            IJwtSettings settings = Configuration.GetSection(typeof(JwtSettings).Name).Get<JwtSettings>();
+            services.AddAutoMapper(m => m.AddProfile(new AutoMapperConfiguration()));
+            services.AutoBind(typeof(PetService).Assembly);
+            services.AutoBind(typeof(PetRepository).Assembly);
+            services.AddAutoMapper(m => m.AddProfile(new AutoMapperConfiguration()));
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie();
 
         }
 

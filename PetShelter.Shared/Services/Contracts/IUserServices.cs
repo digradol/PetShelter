@@ -10,5 +10,7 @@ namespace PetShelter.Shared.Services.Contracts
 {
     public interface IUserServices : IBaseCrudService<UserDto, IUserRepository>
     {
+        Task<bool> CanUserLoginAsync(string username, string password);
+        Task<UserDto> GetByUsernameAsync(string username);
     }
 }

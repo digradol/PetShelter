@@ -10,5 +10,6 @@ namespace PetShelter.Shared.Services.Contracts
 {
     public interface IPetVaccineServices : IBaseCrudService<PetVaccineDto, IPetVaccineRepository>
     {
+        Task VaccinatePetAsync(int petId, int vaccineId);
     }
 }
