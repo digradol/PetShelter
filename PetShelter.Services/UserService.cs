@@ -17,5 +17,16 @@ namespace PetShelter.Services
         {
 
         }
+
+        public Task<bool> CanUserLoginAsync(string username, string password)
+        {
+            return _repository.CanUserLoginAsync(username, password);
+        }
+
+        public Task<UserDto> GetByUsernameAsync(string username)
+        {
+            return _repository.GetByUsernameAsync(username);
+        }
+        
     }
 }

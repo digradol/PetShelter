@@ -17,6 +17,9 @@ namespace PetShelter.Services
         {
 
         }
-
+        public Task<RoleDto> GetByNameIfExistsAsync(string roleName)
+        {
+            return _repository.GetByNameIfExistsAsync(roleName);
+        }
     }
 }

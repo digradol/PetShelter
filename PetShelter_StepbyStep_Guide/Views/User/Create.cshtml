@@ -84,7 +84,7 @@
 
             <div class="col-md-10">
 
-                @Html.DropDownListFor(model => model.RoleId, Model.RoleList, "Choose a location...", new { @class = "form-control" })
+                @Html.DropDownListFor(model => model.RoleId, Model.RolesList, "Choose a location...", new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.RoleId)
             </div>
         </div>
@@ -95,7 +95,7 @@
 
             <div class="col-md-10">
 
-                @Html.DropDownListFor(model => model.ShelterId, Model.ShelterList, "Choose a location...", new { @class = "form-control" })
+                @Html.DropDownListFor(model => model.ShelterId, Model.SheltersList, "Choose a location...", new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.ShelterId)
             </div>
         </div>

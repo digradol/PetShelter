@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using PetShelter.Data.Entities;
 using PetShelter.Shared;
 using PetShelter.Shared.Dtos;
@@ -16,6 +17,16 @@ namespace PetShelter.Data.Repos
     {
         public UserRepository(PetShelterDbContext context, IMapper mapper) : base(context, mapper)
         {
+        }
+        public async Task<bool> CanUserLoginAsync(string username, string password)
+        {
+            var user = await _dbSet.FirstOrDefaultAsync(u => u.Username == username && u.Password == password);
+            return user != null;
+        }
+
+        public async  Task<UserDto> GetByUsernameAsync(string username)
+        {
+            return MapToModel(await _dbSet.FirstOrDefaultAsync(u => u.Username == username));
         }
     }
 }

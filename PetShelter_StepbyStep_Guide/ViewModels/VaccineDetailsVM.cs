@@ -1,6 +1,6 @@
 ﻿namespace PetShelter_StepbyStep_Guide.ViewModels
 {
-    public class VaccineDetailsVM
+    public class VaccineDetailsVM : BaseVM
     {
         public string Description { get; set; }
         public string Name { get; set; }

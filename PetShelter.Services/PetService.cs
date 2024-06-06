@@ -1,4 +1,5 @@
-﻿using PetShelter.Shared;
+﻿using Microsoft.Identity.Client;
+using PetShelter.Shared;
 using PetShelter.Shared.Dtos;
 using PetShelter.Shared.Repos.Contracts;
 using PetShelter.Shared.Services.Contracts;
@@ -16,6 +17,15 @@ namespace PetShelter.Services
         public PetService(IPetRepository repository) : base(repository)
         {
 
+        }
+        public Task AdoptPetAsync(int userId, int petId)
+        {
+            return _repository.AdoptPetAsync( userId, petId);
+        }
+
+        public Task GivePetAsync(int userId, int shelterId, PetDto pet)
+        {
+            return _repository.GivePetAsync(userId, shelterId, pet);
         }
 
     }

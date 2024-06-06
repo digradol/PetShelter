@@ -9,6 +9,6 @@ namespace PetShelter.Shared.Repos.Contracts
 {
     public interface ILocationRepository : IBaseRepository<LocationDto>
     {
-
+        public Task<IEnumerable<LocationDto>> GetAllActiveAsync();
     }
 }
