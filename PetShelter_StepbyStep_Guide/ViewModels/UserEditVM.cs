@@ -17,5 +17,7 @@ namespace PetShelter_StepbyStep_Guide.ViewModels
         public IEnumerable<SelectListItem> RolesList { get; set; }
         public int? ShelterId { get; set; }
         public IEnumerable<SelectListItem> SheltersList { get; set; }
+        
+        public int Id { get; set; }
     }
 }

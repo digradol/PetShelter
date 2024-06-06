@@ -6,6 +6,9 @@
         public PetDetailsVM Pet { get; set; }
         public VaccineDetailsVM Vaccine { get; set; }
 
+        public int PetId { get; set; }
+        public int VaccineId { get; set; }
 
+        public int Id { get; set; }
     }
 }

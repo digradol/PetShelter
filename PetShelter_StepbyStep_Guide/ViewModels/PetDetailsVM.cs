@@ -36,5 +36,6 @@ namespace PetShelter_StepbyStep_Guide.ViewModels
         public virtual Shelter Shelter { get; set; }
 
         public virtual List<PetVaccine> PetVaccines { get; set; }
+        public int Id { get; set; }
     }
 }

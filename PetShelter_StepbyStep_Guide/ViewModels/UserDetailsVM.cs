@@ -19,5 +19,6 @@ namespace PetShelter_StepbyStep_Guide.ViewModels
         public virtual List<PetDetailsVM> AdoptedPets { get; set; }
 
         public virtual List<PetDetailsVM> GivenPets { get; set; }
+        public int Id { get; set; }
     }
 }

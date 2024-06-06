@@ -1,10 +1,10 @@
-﻿@model IEnumerable<PetShelter.Web.ViewModels.BreedDetailsVM>
+﻿@model IEnumerable<PetShelter_StepbyStep_Guide.ViewModels.BreedDetailsVM>
 
 @{
     ViewBag.Title = "index";
 }
 <h2>Index</h2>
-<p>@Html.ActionLink(Layout"Create New", "Create")</p>
+<p>@Html.ActionLink("Create New", "Create")</p>
 <table class="table">
     <tr>
         <th>@Html.DisplayNameFor(model => model.Name)</th>
@@ -17,10 +17,10 @@
         <tr>
             <td>@Html.DisplayFor(modelItem => item.Name)</td>
             <td>@Html.DisplayFor(modelItem => item.Size)</td>
-            <td>@Html.DIspalyFor(modelItem => item.Pets.Count)</td>
+            <td>@Html.DisplayFor(modelItem => item.Pets.Count)</td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.Id })|
-                @Html.ActionLink("Details", "Details", new { id = item.id })|
+                @Html.ActionLink("Details", "Details", new { id = item.Id })|
                 @Html.ActionLink("Delete", "Delete", new { id = item.Id })
             </td>
         </tr>

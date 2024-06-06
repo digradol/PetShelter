@@ -8,5 +8,7 @@ namespace PetShelter_StepbyStep_Guide.ViewModels
         public string Name { get; set; }
 
         public virtual User Users { get; set; }
+
+        public int Id { get; set; }
     }
 }

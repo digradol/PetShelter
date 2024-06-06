@@ -31,7 +31,7 @@
         public int? ShelterId { get; set; }
 
 
-
+        public int Id { get; set; }
 
     }
 }

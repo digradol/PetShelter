@@ -9,5 +9,7 @@ namespace PetShelter_StepbyStep_Guide.ViewModels
         public string Name { get; set; }
         [Required]
         public BreedSize Size { get; set; }
+        [Required]
+        public int Id { get; set; }
     }
 }

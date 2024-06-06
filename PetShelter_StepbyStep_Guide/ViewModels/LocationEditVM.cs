@@ -10,5 +10,6 @@
         public string Country { get; set; }
 
         public int ShelterId { get; set; }
+        public int Id { get; set; }
     }
 }
