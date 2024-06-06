@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace PetShelter_StepbyStep_Guide.Controllers
 {
-    [Authorize(AuthenticationSchemes = CookieAuthenticationDefaults.AuthenticationScheme, Roles = "Admin, Employee")]
+    [Authorize(AuthenticationSchemes = CookieAuthenticationDefaults.AuthenticationScheme, Roles = "Admin, Employee, User")]
     public class ShelterController : BaseCrudController<ShelterDto, IShelterRepository, IShelterServices, ShelterEditVM, ShelterDetailsVM>
     {
         private ILocationServices _locationsService;

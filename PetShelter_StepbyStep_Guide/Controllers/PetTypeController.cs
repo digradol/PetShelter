@@ -8,7 +8,7 @@ using PetShelter_StepbyStep_Guide.ViewModels;
 
 namespace PetShelter_StepbyStep_Guide.Controllers
 {
-    [Authorize(AuthenticationSchemes = CookieAuthenticationDefaults.AuthenticationScheme, Roles = "Admin, Employee")]
+    [Authorize(AuthenticationSchemes = CookieAuthenticationDefaults.AuthenticationScheme, Roles = "Admin, Employee, User")]
     public class PetTypeController : BaseCrudController<PetTypeDto, IPetTypeRepository, IPetTypeServices, PetTypeEditVM, PetTypeDetailsVM>
     {
         public PetTypeController(IPetTypeServices service, IMapper mapper) : base(service, mapper)
