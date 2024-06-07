@@ -16,6 +16,7 @@ namespace PetShelter.Data.Repos
     {
         public ShelterRepository(PetShelterDbContext context, IMapper mapper) : base(context, mapper)
         {
+
         }
     }
 }

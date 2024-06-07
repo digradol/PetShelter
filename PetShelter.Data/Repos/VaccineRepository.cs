@@ -16,6 +16,7 @@ namespace PetShelter.Data.Repos
     {
         public VaccineRepository(PetShelterDbContext context, IMapper mapper) : base(context, mapper)
         {
+
         }
     }
 }
